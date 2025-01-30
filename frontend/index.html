@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="kanban">
+        <!-- Cada quadro será um elemento com a classe .board -->
+        <div class="board" id="board-1">
+            <h2>Quadro 1</h2>
+            <div class="list-container" id="board-1-lists" data-board-id="1">
+                <!-- As listas serão inseridas aqui -->
+            </div>
+            <button onclick="addList(1)">Adicionar Lista</button>
+        </div>
+
+        <div class="board" id="board-2">
+            <h2>Quadro 2</h2>
+            <div class="list-container" id="board-2-lists" data-board-id="2">
+                <!-- As listas serão inseridas aqui -->
+            </div>
+            <button onclick="addList(2)">Adicionar Lista</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
