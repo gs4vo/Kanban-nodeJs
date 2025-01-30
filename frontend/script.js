@@ -1,4 +1,3 @@
-// Dados de exemplo: Quadros e Listas
 let quadros = [
   { id: 1, name: "Quadro 1" },
   { id: 2, name: "Quadro 2" }
@@ -10,7 +9,6 @@ let listas = [
   { id: 3, title: "Lista 3", boardId: 2 }
 ];
 
-// Função para adicionar lista ao quadro
 function addList(boardId) {
   const title = prompt("Digite o título da lista:");
   if (title) {
@@ -24,7 +22,6 @@ function addList(boardId) {
   }
 }
 
-// Função para renderizar quadros e listas
 function renderBoards() {
   const boardContainers = document.querySelectorAll('.list-container');
 
@@ -52,17 +49,14 @@ function renderBoards() {
   });
 }
 
-// Função de início do arrasto
 function dragStart(event) {
   event.dataTransfer.setData('text', event.target.getAttribute('data-list-id'));
 }
 
-// Função de fim do arrasto
 function dragEnd(event) {
   event.target.style.opacity = '1';
 }
 
-// Permitir que as listas sejam arrastadas entre os quadros
 const boardContainers = document.querySelectorAll('.list-container');
 
 boardContainers.forEach(boardContainer => {
@@ -90,5 +84,4 @@ boardContainers.forEach(boardContainer => {
 });
 
 
-// Inicializar o kanban
 renderBoards();
